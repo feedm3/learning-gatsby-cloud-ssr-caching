@@ -1,9 +1,19 @@
 # Learning Gatsby Cloud SSR Caching
 
+Demo: https://learninggatsbycloudssrcachingm.gatsbyjs.io
+
 ```
+# install dependencies
 yarn
+
+# start the dev server
 yarn start
+
+# build production bundle
 yarn build
+
+# serve production bundle
+yarn serve
 ```
 
 ## Resources
