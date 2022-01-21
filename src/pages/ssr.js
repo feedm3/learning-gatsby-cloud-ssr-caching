@@ -1,21 +1,33 @@
 import * as React from 'react'
+import {useEffect, useState} from 'react'
 import fetch from 'node-fetch'
 import {Link} from 'gatsby'
 
 export default function SSR(props) {
   const {image, createdDate} = props.serverData
 
+  const [now, setNow] = useState(null)
+  useEffect(() => {
+    setInterval(() => {
+      setNow(new Date().toUTCString());
+    }, 1000)
+  })
+
   return (
     <>
       <Link to='/'>Home</Link><br/>
       <h1>SSR: Server Side Rendering</h1>
-      <p>Cache in Browser: 10 sec, Cache in CDN: 1min + 4min stale-while-revalidate</p>
-      <p>Now: {new Date().toUTCString()}</p>
-      <p>Page created at: {createdDate}</p>
-      <p>This page took 5 seconds to be returned from the server</p>
+      <p>Caching:</p>
+      <ul>
+        <li>Cache in Browser: 10 sec</li>
+        <li>Cache in CDN: 1min + 4min stale-while-revalidate</li>
+      </ul>
+      <p>Now Time: {now}</p>
+      <p>SSR Time: {createdDate} (delayed render time on server: 5 seconds)</p>
       <img
         alt='doggo'
         src={image}
+        style={{maxWidth: "200px"}}
       />
     </>
   )
