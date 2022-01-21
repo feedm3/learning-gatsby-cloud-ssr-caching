@@ -7,10 +7,7 @@ export default function Home(props) {
       <h1>Rendering Modes Starter</h1>
       <ul>
         <li>
-          <Link to='/ssr-instant'>SSR Instant page</Link>
-        </li>
-        <li>
-          <Link to='/ssr-delayed'>SSR Delayed page</Link>
+          <Link to='/ssr'>SSR page</Link>
         </li>
       </ul>
     </>

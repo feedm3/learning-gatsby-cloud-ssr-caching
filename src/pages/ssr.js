@@ -9,6 +9,8 @@ export default function SSR(props) {
     <>
       <Link to='/'>Home</Link><br/>
       <h1>SSR: Server Side Rendering</h1>
+      <p>Cache in Browser: 10 sec, Cache in CDN: 1min + 4min stale-while-revalidate</p>
+      <p>Now: {new Date().toUTCString()}</p>
       <p>Page created at: {createdDate}</p>
       <p>This page took 5 seconds to be returned from the server</p>
       <img
@@ -31,7 +33,7 @@ export async function getServerData({params}) {
 
   return {
     headers: {
-      'Cache-Control': 'public, max-age=10, s-maxage=30, stale-while-revalidate=30',
+      'Cache-Control': 'public, max-age=10, s-maxage=60, stale-while-revalidate=240',
     },
     props: {
       // data has the shape of "message", "status" where message is the image src
