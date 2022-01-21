@@ -1,8 +1,8 @@
 const path = require('path')
 
 exports.createPages = ({
-  actions,
-}) => {
+                         actions,
+                       }) => {
 
   actions.createPage({
     path: '/dsg',
