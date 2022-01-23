@@ -13,6 +13,8 @@ export default function Home() {
           <Link to='/ssr/no-cache'>SSR page without "Cache-Control" Headers</Link>
         </li>
       </ul>
+      <p>Repository: <a href="https://github.com/feedm3/learning-gatsby-cloud-ssr-caching"
+                  target="_blank">https://github.com/feedm3/learning-gatsby-cloud-ssr-caching</a></p>
     </>
   )
 }
