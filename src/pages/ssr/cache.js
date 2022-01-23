@@ -17,7 +17,7 @@ export default function Cache(props) {
     <>
       <Link to='/'>Home</Link><br/>
       <h1>SSR: Server Side Rendering</h1>
-      <p>Caching:</p>
+      <p>Caching with "Cache-Control" header:</p>
       <ul>
         <li>Cache in Browser: 10 sec</li>
         <li>Cache in CDN: 1min + 4min stale-while-revalidate</li>
