@@ -20,7 +20,7 @@ export default function Cache(props) {
       <p>Caching with "Cache-Control" header:</p>
       <ul>
         <li>Cache in Browser: 10 sec</li>
-        <li>Cache in CDN: 1min + 4min stale-while-revalidate</li>
+        <li>Cache in CDN: 1min + 4min stale-while-revalidate (relative to SSR Time)</li>
       </ul>
       <p>Now Time: {now}</p>
       <p>SSR Time: {createdDate} (delayed render time on server: 5 seconds)</p>
