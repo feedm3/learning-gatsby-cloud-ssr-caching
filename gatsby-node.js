@@ -1,2 +1,1 @@
-exports.createPages = () => {
-}
+exports.createPages = () => {}
