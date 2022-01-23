@@ -8,6 +8,8 @@ export default function Home() {
       <ul>
         <li>
           <Link to='/ssr/cache'>SSR page with Caching</Link>
+        </li>
+        <li>
           <Link to='/ssr/no-cache'>SSR page without Caching</Link>
         </li>
       </ul>
