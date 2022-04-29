@@ -9,18 +9,13 @@ export default function NotFound() {
 }
 
 export async function getServerData(context) {
-  const referer = context.headers.get('referer') || context.headers.get('host');
-  const baseUrl = new URL(referer);
-  const redirectOrigin = baseUrl.origin;
-
-
-  console.log('[...].js: 404 request incoming. Redirect to origin:', redirectOrigin);
+  console.log('[...].js: 404 request incoming...');
 
   return {
     props: {},
     status: 301,
     headers: {
-      'Location': redirectOrigin + '/'
+      'Location': '/'
     }
   }
 }

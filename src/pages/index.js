@@ -17,7 +17,7 @@ export default function Home() {
         cached. This is because Gatsby waits for the page to render on server before navigating to it. To show the
         effects of caching, the render is delayed by 5 seconds.</p>
       <p>Repository: <a href="https://github.com/feedm3/learning-gatsby-cloud-ssr-caching"
-                        target="_blank">https://github.com/feedm3/learning-gatsby-cloud-ssr-caching</a></p>
+                        target="_blank" rel="noreferrer" >https://github.com/feedm3/learning-gatsby-cloud-ssr-caching</a></p>
     </>
   )
 }
